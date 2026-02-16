@@ -1,0 +1,7 @@
+<div class="site-title">
+  <a href="{{ "/" | relURL }}">{{ site.Title }}</a>
+</div>
+<button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+  <span></span><span></span><span></span>
+</button>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}

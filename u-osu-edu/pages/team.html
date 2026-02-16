@@ -1,0 +1,83 @@
+<!-- TEAM PAGE — Paste into WordPress Code Editor -->
+<!-- IMPORTANT: Always edit this page in Code Editor mode, not Visual Editor -->
+
+<style>
+/* --- Accent Colors (OSU Scarlet) --- */
+.entry-content a, .site-content a { color: #BB0000; }
+.entry-content a:hover, .site-content a:hover { color: #990000; }
+
+/* --- PI Card --- */
+.pi-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+  .pi-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .pi-card > div:last-child {
+    margin-left: 0 !important;
+  }
+}
+
+/* --- Team Grid --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.team-card {
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+</style>
+
+<h2>Principal Investigator</h2>
+
+<div class="pi-card">
+  <!-- TODO: Replace with your uploaded headshot URL -->
+  <div class="placeholder-photo" style="width:150px; height:150px; border-radius:50%; background:#f0f0f0; display:flex; align-items:center; justify-content:center; font-size:3em; color:#999; border:3px solid #e0e0e0; flex-shrink:0;">PI</div>
+  <div style="margin-left:2em;">
+    <h3 style="margin-top:0;">Jia Liu, PhD</h3>
+    <p style="color:#BB0000; font-weight:600; margin-bottom:0.5em;">Assistant Professor</p>
+    <p>Dr. Jia Liu is an Assistant Professor in the School of Health and Rehabilitation Sciences, College of Medicine at The Ohio State University. Her research focuses on understanding mechanisms of neuromotor plasticity and developing interventions to improve function in people with movement impairments.</p>
+    <p>
+      <a href="mailto:jia.liu@osumc.edu">Email</a> |
+      <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=fB4ilS0AAAAJ">Google Scholar</a>
+    </p>
+  </div>
+</div>
+
+<!--
+<h2>Graduate Students</h2>
+
+<div class="team-grid">
+  <div class="team-card">
+    <div class="placeholder-photo" style="width:120px; height:120px; border-radius:50%; background:#f0f0f0; margin:0 auto 1em; display:flex; align-items:center; justify-content:center; font-size:2em; color:#999; border:3px solid #e0e0e0;">&#128100;</div>
+    <h3>Name</h3>
+    <p style="color:#BB0000; font-weight:600;">PhD Student</p>
+    <p style="color:#555; font-size:0.9em;">Research interests and background.</p>
+    <p><a href="mailto:email@osu.edu">Email</a></p>
+  </div>
+</div>
+-->
+
+<!--
+<h2>Alumni</h2>
+
+<table>
+  <tr><th>Name</th><th>Role</th><th>Current Position</th></tr>
+  <tr><td>Name</td><td>PhD Student (2020–2024)</td><td>Postdoc at XYZ University</td></tr>
+</table>
+-->

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="footer-info">
+    <div class="lab-name">{{ site.Title }}</div>
+    <div>{{ site.Params.department }}</div>
+    <div>{{ site.Params.institution }}</div>
+    {{ with site.Params.disclaimer }}
+      <div class="disclaimer">{{ . }}</div>
+    {{ end }}
+  </div>
+  <div>
+    <p>&copy; {{ now.Year }} {{ site.Params.author }}. All rights reserved.</p>
+  </div>
+</div>

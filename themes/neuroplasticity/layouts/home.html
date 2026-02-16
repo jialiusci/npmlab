@@ -1,0 +1,202 @@
+{{ define "main" }}
+  <!-- Image Slideshow -->
+  <section class="slideshow-section slideshow-top">
+    <div class="slideshow">
+      <div class="slideshow-track">
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <div class="slide-image">
+            <!-- TODO: Replace with actual image: <img src="/img/slide1.jpg" alt="Brain imaging research"> -->
+            <div class="slide-placeholder slide-gradient-1">
+              <span class="slide-placeholder-icon">🧠</span>
+              <span class="slide-placeholder-label">Brain Imaging</span>
+            </div>
+          </div>
+          <div class="slide-caption">Understanding neural reorganization through advanced neuroimaging</div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-image">
+            <!-- TODO: Replace with actual image: <img src="/img/slide2.jpg" alt="TMS neuromodulation"> -->
+            <div class="slide-placeholder slide-gradient-2">
+              <span class="slide-placeholder-icon">⚡</span>
+              <span class="slide-placeholder-label">Neuromodulation</span>
+            </div>
+          </div>
+          <div class="slide-caption">Non-invasive brain and spinal cord stimulation to augment recovery</div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="slide-image">
+            <!-- TODO: Replace with actual image: <img src="/img/slide3.jpg" alt="Spinal cord research"> -->
+            <div class="slide-placeholder slide-gradient-3">
+              <span class="slide-placeholder-icon">🔬</span>
+              <span class="slide-placeholder-label">Neurophysiology</span>
+            </div>
+          </div>
+          <div class="slide-caption">Probing motor circuit excitability at cortical and spinal levels</div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide">
+          <div class="slide-image">
+            <!-- TODO: Replace with actual image: <img src="/img/slide4.jpg" alt="Movement biomechanics"> -->
+            <div class="slide-placeholder slide-gradient-4">
+              <span class="slide-placeholder-icon">🏃</span>
+              <span class="slide-placeholder-label">Biomechanics</span>
+            </div>
+          </div>
+          <div class="slide-caption">Analyzing movement patterns to guide rehabilitation strategies</div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="slide">
+          <div class="slide-image">
+            <!-- TODO: Replace with actual image: <img src="/img/slide5.jpg" alt="Data collection"> -->
+            <div class="slide-placeholder slide-gradient-5">
+              <span class="slide-placeholder-icon">📊</span>
+              <span class="slide-placeholder-label">Data Collection</span>
+            </div>
+          </div>
+          <div class="slide-caption">Translating research findings into clinical rehabilitation practice</div>
+        </div>
+      </div>
+      <!-- Slideshow overlay spacer (for dot positioning) -->
+      <div class="slideshow-overlay"></div>
+      <!-- Slideshow Controls -->
+      <button class="slide-arrow slide-prev" aria-label="Previous slide">&lsaquo;</button>
+      <button class="slide-arrow slide-next" aria-label="Next slide">&rsaquo;</button>
+      <div class="slide-dots">
+        <button class="slide-dot active" aria-label="Slide 1"></button>
+        <button class="slide-dot" aria-label="Slide 2"></button>
+        <button class="slide-dot" aria-label="Slide 3"></button>
+        <button class="slide-dot" aria-label="Slide 4"></button>
+        <button class="slide-dot" aria-label="Slide 5"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <p class="mission-text-light">{{ site.Params.description }}</p>
+    <div class="highlights">
+      <div class="highlight-card scroll-reveal">
+        <div class="card-icon">🔬</div>
+        <h3>Research</h3>
+        <p>We investigate mechanisms of neuromotor plasticity and develop novel interventions for people with spinal cord injury and stroke.</p>
+        <a href="{{ "/research/" | relURL }}">Learn more &rarr;</a>
+      </div>
+      <div class="highlight-card scroll-reveal">
+        <div class="card-icon">📄</div>
+        <h3>Publications</h3>
+        <p>Our peer-reviewed work advances the understanding of neuromotor recovery and rehabilitation.</p>
+        <a href="{{ "/publications/" | relURL }}">View publications &rarr;</a>
+      </div>
+      <div class="highlight-card scroll-reveal">
+        <div class="card-icon">🤝</div>
+        <h3>Openings</h3>
+        <p>We are looking for motivated students and researchers to join our team.</p>
+        <a href="{{ "/join/" | relURL }}">View openings &rarr;</a>
+      </div>
+    </div>
+
+    {{ with .Content }}
+      <div class="page-content">
+        {{ . }}
+      </div>
+    {{ end }}
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p class="contact-intro">Interested in our research or joining the lab? We'd love to hear from you.</p>
+      <div class="contact-layout">
+        <div class="contact-form-col">
+          <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+            <input type="hidden" name="_subject" id="hidden-subject" value="Web Contact">
+            <div class="form-row">
+              <input type="text" name="first_name" placeholder="First Name" required>
+              <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" id="subject-field" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-map-col">
+          <div class="map-embed">
+            <iframe id="contact-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3000!2d-83.0145!3d39.9945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!1sus" width="100%" height="100%" style="border:0; border-radius: 8px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <button class="map-reset-btn" onclick="document.getElementById('contact-map').src = document.getElementById('contact-map').src;">Reset Map View</button>
+          <div class="map-label">
+            <strong>Atwell Hall</strong><br>
+            453 W 10th Ave, Columbus, OH 43210<br>
+            School of Health and Rehabilitation Sciences<br>
+            College of Medicine, The Ohio State University
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slideshow + Scroll Reveal Script -->
+  <script>
+  (function() {
+    var slides = document.querySelectorAll('.slide');
+    var dots = document.querySelectorAll('.slide-dot');
+    var prevBtn = document.querySelector('.slide-prev');
+    var nextBtn = document.querySelector('.slide-next');
+    var current = 0;
+    var timer;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+    function startAuto() { timer = setInterval(next, 4000); }
+    function resetAuto() { clearInterval(timer); startAuto(); }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', function() { prev(); resetAuto(); });
+      nextBtn.addEventListener('click', function() { next(); resetAuto(); });
+    }
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTo(i); resetAuto(); });
+    });
+    startAuto();
+
+    // Prepend "Web Contact - " to subject on submit
+    var contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function() {
+        var subjectField = document.getElementById('subject-field');
+        var hiddenSubject = document.getElementById('hidden-subject');
+        if (subjectField && subjectField.value) {
+          hiddenSubject.value = 'Web Contact - ' + subjectField.value;
+        }
+      });
+    }
+
+    // Scroll reveal
+    var reveals = document.querySelectorAll('.scroll-reveal');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function(el) { observer.observe(el); });
+    } else {
+      reveals.forEach(function(el) { el.classList.add('revealed'); });
+    }
+  })();
+  </script>
+{{ end }}

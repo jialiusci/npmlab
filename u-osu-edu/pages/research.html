@@ -1,0 +1,249 @@
+<!-- RESEARCH PAGE — Paste into WordPress Code Editor -->
+<!-- IMPORTANT: Always edit this page in Code Editor mode, not Visual Editor -->
+
+<style>
+/* --- Accent Colors (OSU Scarlet) --- */
+.entry-content a, .site-content a { color: #BB0000; }
+.entry-content a:hover, .site-content a:hover { color: #990000; }
+
+/* --- Research Themes: Side-by-Side Layout --- */
+.themes-container {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 2.5rem 0;
+}
+.theme-card {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+}
+.theme-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-color: #BB0000;
+}
+.theme-visual {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #f8f8f8 0%, #eee 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.theme-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.theme-icon {
+  font-size: 4rem;
+  opacity: 0.8;
+}
+.theme-title {
+  font-size: 1.15rem !important;
+  color: #212121 !important;
+  margin: 0 0 0.25rem !important;
+  line-height: 1.3;
+}
+.theme-subtitle {
+  display: inline-block;
+  background: #BB0000;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.75rem;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+.theme-tagline {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.theme-toggle {
+  display: inline-block;
+  color: #BB0000 !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none !important;
+  padding: 0.4rem 1rem;
+  border: 1px solid #BB0000;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.theme-toggle:hover {
+  background: #BB0000;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Bidirectional Arrow between themes */
+.themes-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 0 0.25rem;
+}
+.arrow-line {
+  width: 2px;
+  height: 30px;
+  background: #BB0000;
+}
+.arrow-label {
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  writing-mode: horizontal-tb;
+  padding: 0.4rem 0;
+  text-align: center;
+}
+.arrow-heads {
+  font-size: 1.6rem;
+  color: #BB0000;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Expandable Details Sections */
+.theme-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.theme-details.open {
+  max-height: 1000px;
+  opacity: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .themes-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .themes-link {
+    flex-direction: row;
+    min-width: auto;
+    padding: 0.75rem 0;
+  }
+  .arrow-line {
+    width: 30px;
+    height: 2px;
+  }
+  .arrow-label {
+    writing-mode: horizontal-tb;
+    padding: 0 0.5rem;
+  }
+}
+
+/* --- Research Areas (Detail sections) --- */
+.research-area {
+  background: #fafafa;
+  border-left: 4px solid #BB0000;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.research-area h3 {
+  color: #BB0000;
+  margin-top: 0;
+}
+</style>
+
+<p>Our lab pursues two complementary research themes to improve neuromotor function in people with neurological conditions such as spinal cord injury and stroke. We use a multidisciplinary approach, including neuroimaging, neurophysiology, and biomechanics, to identify markers of impairment and recovery. In parallel, we aim to improve motor rehabilitation using noninvasive neuromodulation of the brain and spinal cord.</p>
+
+<!-- === Two Themes: Side-by-Side Visual Layout === -->
+<div class="themes-container">
+
+  <!-- Theme 1 Card -->
+  <div class="theme-card" id="theme-mechanisms">
+    <div class="theme-visual">
+      <!-- TODO: Replace with your actual image -->
+      <div class="theme-icon">🧠</div>
+    </div>
+    <h2 class="theme-title">Understanding Neuromotor Plasticity</h2>
+    <p class="theme-subtitle">Mechanisms</p>
+    <p class="theme-tagline">MRI · Neurophysiology · Biomechanics</p>
+    <a href="#details-theme1" class="theme-toggle" onclick="document.getElementById('details-theme1').classList.toggle('open'); this.textContent = this.textContent === 'View Details ▾' ? 'Hide Details ▴' : 'View Details ▾'; return false;">View Details ▾</a>
+  </div>
+
+  <!-- Bidirectional Arrow -->
+  <div class="themes-link">
+    <div class="arrow-line"></div>
+    <div class="arrow-label">complementary</div>
+    <div class="arrow-heads">⇄</div>
+  </div>
+
+  <!-- Theme 2 Card -->
+  <div class="theme-card" id="theme-intervention">
+    <div class="theme-visual">
+      <!-- TODO: Replace with your actual image -->
+      <div class="theme-icon">⚡</div>
+    </div>
+    <h2 class="theme-title">Neuromodulation to Augment Recovery</h2>
+    <p class="theme-subtitle">Intervention</p>
+    <p class="theme-tagline">TMS · Spinal Cord Stimulation · Peripheral Nerve Stimulation</p>
+    <a href="#details-theme2" class="theme-toggle" onclick="document.getElementById('details-theme2').classList.toggle('open'); this.textContent = this.textContent === 'View Details ▾' ? 'Hide Details ▴' : 'View Details ▾'; return false;">View Details ▾</a>
+  </div>
+
+</div>
+
+<!-- === Expandable Details === -->
+
+<!-- Theme 1 Details -->
+<div class="theme-details" id="details-theme1">
+  <div class="research-area">
+    <h3>Mapping Neural Reorganization After Injury</h3>
+    <p>The nervous system has a remarkable capacity to reorganize after injury. We use advanced neuroimaging to characterize how the brain and spinal cord adapt following spinal cord injury and stroke, and to identify the neural signatures that predict functional recovery.</p>
+    <p><strong>Approaches:</strong></p>
+    <ul>
+      <li><strong>Functional MRI (fMRI)</strong> — to map changes in brain activation patterns and functional connectivity</li>
+      <li><strong>Diffusion Tensor Imaging (DTI)</strong> — to assess structural integrity of white matter tracts, including the corticospinal tract</li>
+      <li><strong>Neurophysiological Assessments</strong> — to probe the excitability and recruitment strength of motor circuits at the cortical, subcortical, and spinal levels</li>
+      <li><strong>Movement Biomechanics</strong> — to discern between beneficial and maladaptive movement patterns post-injury</li>
+    </ul>
+    <p>Our goal is to identify biomarkers of plasticity that can guide personalized rehabilitation strategies and predict who will benefit most from targeted interventions.</p>
+  </div>
+</div>
+
+<!-- Theme 2 Details -->
+<div class="theme-details" id="details-theme2">
+  <div class="research-area">
+    <h3>Enhancing Rehabilitation Through Non-invasive Stimulation</h3>
+    <p>Rehabilitation alone may not fully exploit the nervous system's capacity for recovery. We investigate how non-invasive neuromodulation can be combined with rehabilitation to amplify neuroplasticity and improve functional outcomes beyond what rehabilitation achieves alone.</p>
+    <p><strong>Techniques:</strong></p>
+    <ul>
+      <li><strong>Transcranial Magnetic Stimulation (TMS)</strong> — to modulate cortical excitability and promote beneficial plasticity of the brain</li>
+      <li><strong>Spinal Cord Stimulation</strong> — to enhance spinal circuit excitability and facilitate motor output below the level of injury</li>
+      <li><strong>Peripheral Nerve Stimulation</strong> — to augment sensory input and prime neural circuits for motor learning during rehabilitation</li>
+    </ul>
+    <p>We design and test stimulation protocols that are paired with task-specific rehabilitation, with the goal of translating these combined approaches into clinical practice for people with spinal cord injury and stroke.</p>
+  </div>
+</div>
+
+<!-- === Our Approach === -->
+<h2>Our Approach</h2>
+<p>Understanding the mechanisms of plasticity is essential for designing effective interventions. By integrating multidisciplinary sciences, we can:</p>
+<ol>
+  <li><strong>Identify targets</strong> — Use imaging to pinpoint where and how the nervous system has reorganized</li>
+  <li><strong>Modulate circuits</strong> — Apply stimulation to enhance beneficial plasticity or reduce maladaptive changes</li>
+  <li><strong>Measure outcomes</strong> — Track both neural and functional changes to refine our interventions</li>
+  <li><strong>Translate to clinic</strong> — Move promising approaches from the lab to clinical rehabilitation settings</li>
+</ol>
