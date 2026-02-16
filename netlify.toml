@@ -11,3 +11,7 @@
 
 [context.branch-deploy]
   command = "hugo --minify -b $DEPLOY_PRIME_URL"
+
+# Enable Netlify Forms processing
+[build.processing]
+  skip_processing = false
