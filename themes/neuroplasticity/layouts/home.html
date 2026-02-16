@@ -111,7 +111,9 @@
       <p class="contact-intro">Interested in our research or joining the lab? We'd love to hear from you.</p>
       <div class="contact-layout">
         <div class="contact-form-col">
-          <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
             <input type="hidden" name="_subject" id="hidden-subject" value="Web Contact">
             <div class="form-row">
               <input type="text" name="first_name" placeholder="First Name" required>
